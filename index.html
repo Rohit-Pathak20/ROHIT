@@ -1,150 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Navbar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
     <style>
-        /* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar {
-    background-color: #333;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .navbaar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            color: #ff6347;
+        }
 
-.navbar .logo a {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        .ul {
+            list-style: none;
+            display: flex;
+            gap: 4rem;
+        }
 
-.nav-links li {
-    position: relative;
-}
+        .ul a {
+            color: #ff6347;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
+        .ul a:hover {
+            color: #ff6347;
+        }
 
-.nav-links li a:hover {
-    background-color: #575757;
-}
+        .cta button {
+            padding: 0.5rem 1rem;
+            border-radius: 13px;
+            border: none;
+            color: #fff;
+            background-color: #ff6347;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-/* Dropdown Menu */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-}
+        .cta button:hover {
+            background-color: #ff4500;
+        }
 
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    color: white;
-    display: block;
-}
+        .div {
+            margin: 50px;
+            padding: 20px 13px;
+            text-align: center;
+            justify-content: space-between;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .span {
+            color: #50ff47;
+        }
 
-.dropdown-content a:hover {
-    background-color: #575757;
-}
+        .button {
+            padding: 0.7rem 2rem;
+            border-radius: 13px;
+            border: none;
+            color: #fff;
+            background-color: #47ff6c;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-/* Mobile Menu Icon */
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
+        .button:hover {
+            background-color: #3cff00;
+        }
 
-/* Mobile View - Responsive Design */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
+        .content-section {
+            padding: 4rem 5%;
+            display: grid;
+            gap: 4rem;
+        }
 
-    .nav-links li {
-        text-align: center;
-        width: 100%;
-    }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
 
-    .nav-links li a {
-        padding: 15px;
-    }
+        .news-card {
+            background: rgba(14, 7, 158, 0.451);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-    .nav-links.active {
-        display: flex;
-    }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
 
-    .menu-icon {
-        display: block;
-    }
-}
+        .news-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
 
+        .news-date {
+            color: #000000;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
+
 <body>
+    <nav class="navbaar">
 
-    <!-- Navbar -->
-    <nav class="navbar">
         <div class="logo">
-            <a href="#">MySite</a>
+            unsolth
         </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Services</a>
-                <div class="dropdown-content">
-                    <a href="#web-design">Web Design</a>
-                    <a href="#seo">SEO</a>
-                    <a href="#marketing">Marketing</a>
-                </div>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#blog">Blog</a></li>
+        <ul class="ul">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">content</a></li>
         </ul>
-
-        <!-- Mobile Menu Icon -->
-        <div class="menu-icon" id="menu-icon">
-            <i class="fa fa-bars"></i>
+        <div class="cta">
+            <button class="button">Sign up</button>
         </div>
     </nav>
-
-    <script src="script.js"></script>
+    <header>
+        <div class="div">
+            <h1 class="header">
+                Talk to the our Ai <br><span class="span"> Chat Gpt Boat</span> try it <span class="span">
+                    for
+                    free</span>
+            </h1>
+            <button class="button"> Sign up</button>
+        </div>
+        <main class="content-section">
+            <h2>Course</h2>
+            <div class="feature-grid">
+                <article class="news-card">
+                    <img src="DeepSeek-Logo.jpg" alt="DeepSeek-Logo">
+                    <h3 class="news-date"> DeepSeek In 30 Days</h3>
+                    <p>We are lean you deepseek in just 30 days for beggner to advance </p>
+                </article>
+                <article class="news-card">
+                    <img src="1_4ZcW5tSdizlbtDQyVpRTuA.jpg" alt="DeepSeek-Logo">
+                    <h3 class="news-date">Data structure and Algoritham In 30 Days</h3>
+                    <p>We are lean you Dsa in just 30 days for beggner to advance </p>
+                </article>
+                <article class="news-card">
+                    <img src="Get-the-Most-Fancied-Web-Development-Services-min-scaled.jpg" alt="DeepSeek-Logo">
+                    <h3 class="news-date">Web development In 30 Days</h3>
+                    <p>We are lean you webdevelopment in just 30 days for beggner to advance </p>
+                </article>
+            </div>
+        </main>
+    </header>
 </body>
-</html>
 
+</html>
